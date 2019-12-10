@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 
 
-@app.route('/res', methods=['GET'])
+@app.route('/', methods=['GET'])
 def getdata():
     return render_template('index.html')
 
