@@ -1,6 +1,7 @@
 import jieba
 import numpy as np
-
+#!/usr/bin/env python
+#coding=utf-8
 
 def main(article1, article2):
     seg_list1 = list(jieba.cut(article1,cut_all=False))
@@ -26,5 +27,5 @@ def main(article1, article2):
 
     result = dot / (np1_array_sqrt * np2_array_sqrt)
 
-    return "Cos相似值: " + str(result)
+    return "Cos: " + str(result)
 
