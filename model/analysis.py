@@ -4,7 +4,8 @@ import flask
 from flask import render_template
 import re
 
-
+#!/usr/bin/env python
+#coding=utf-8
 def main(article1, article2):
     remove_emoji(article1)
     remove_emoji(article2)
@@ -31,6 +32,7 @@ def main(article1, article2):
 
     result = dot / (np1_array_sqrt * np2_array_sqrt)
 
+<<<<<<< HEAD
     return  render_template('ans.html', cosans = str(result), dict = str(dicts), article1 = article1, article2= article2)
 
 def remove_emoji(string):
@@ -50,3 +52,7 @@ def remove_emoji(string):
                 u"\ufe0f"
                            "]+", flags=re.UNICODE)
     return emoji_pattern.sub(r'', string)
+=======
+    return "Cos: " + str(result)
+
+>>>>>>> 08688ace8080e9fec83bd164d5b42b8e66f2ad5a
