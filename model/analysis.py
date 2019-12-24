@@ -3,6 +3,7 @@ import numpy as np
 import flask
 from flask import render_template
 import re
+import nltk
 
 #!/usr/bin/env python
 #coding=utf-8
@@ -17,6 +18,7 @@ def main(article1, article2):
 
     seg_list1_wordvec = []
     seg_list2_wordvec = []
+    
     dicts.remove('\r\n')
     for key in dicts:
         seg_list1_wordvec.append(seg_list1.count(key))
@@ -31,9 +33,7 @@ def main(article1, article2):
     np2_array_sqrt = np.sqrt(np.sum(np2_array**2))
 
     result = dot / (np1_array_sqrt * np2_array_sqrt)
-
-<<<<<<< HEAD
-    return  render_template('ans.html', cosans = str(result), dict = str(dicts), article1 = article1, article2= article2)
+    return  render_template('ans.html', cosans = str(result), dict = str(dicts), article1 = article1, article2= article2, diversity1 = diversity(article1), diversity2=diversity(article2))
 
 def remove_emoji(string):
     emoji_pattern = re.compile("["
@@ -52,7 +52,7 @@ def remove_emoji(string):
                 u"\ufe0f"
                            "]+", flags=re.UNICODE)
     return emoji_pattern.sub(r'', string)
-=======
-    return "Cos: " + str(result)
 
->>>>>>> 08688ace8080e9fec83bd164d5b42b8e66f2ad5a
+def diversity(article):
+    single = nltk.text.Text(jieba.cut(article))
+    return len(set(single))/len(single)
