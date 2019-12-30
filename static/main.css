@@ -1,0 +1,38 @@
+html {
+    background: #333;
+    color: white;
+}
+
+#flex-container {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 50%;
+}
+
+#article-form {
+    display: block;
+    margin-top: 100px;
+}
+
+.article {
+    flex: 1;
+    display: block;
+    margin: 0 auto;
+}
+
+.article > textarea, input[type="submit"] {
+    vertical-align:text-top;
+    padding:5px 15px;
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin-left: 54.45px;
+    margin-top: 10px;
+}

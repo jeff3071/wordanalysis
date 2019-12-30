@@ -1,0 +1,32 @@
+html {
+    background: #333;
+    color: white;
+}
+
+#container {
+    display: block;
+    margin: 50px auto;
+    width: 50%;
+}
+
+#ans-container {
+    background-color: #444;
+    display: block;
+    padding: 10px;
+}
+
+#title {
+    font-size: large;
+}
+
+.ans {
+    max-width: 90%;
+    max-height: 300px;
+    overflow:auto;
+    overflow-x:hidden;
+    background-color: #555;
+    margin-left: 10px;
+}
+::-webkit-scrollbar {
+    width: 10px;
+} 

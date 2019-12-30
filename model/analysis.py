@@ -19,7 +19,8 @@ def main(article1, article2):
     seg_list1_wordvec = []
     seg_list2_wordvec = []
     
-    dicts.remove('\r\n')
+    if '\r\n' in dicts:
+        dicts.remove('\r\n')
     for key in dicts:
         seg_list1_wordvec.append(seg_list1.count(key))
         seg_list2_wordvec.append(seg_list2.count(key))

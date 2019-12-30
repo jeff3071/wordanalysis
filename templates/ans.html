@@ -4,17 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/ans.css">
     <title>結果</title>
 </head>
 <body>
-    <p>文章一: {{ article1 }}</p>
-    <p>文章二: {{ article2 }}</p>
-    Cos相似值: {{ cosans }}<br/><br/>
-    斷詞結果: {{ dict }}
-    <p>詞彙多樣性</p>
-    <ul>
-        <li>文章一: {{ diversity1 }}</li>
-        <li>文章二: {{ diversity2 }}</li>
-    </ul>
+    <div id="container">
+        <p id="title">分析結果</p>
+        <div id="ans-container">
+            文章一: 
+            <p class="ans">{{ article1 }}</p>
+            文章二:
+            <p class="ans">{{ article2 }}</p>
+            斷詞結果:
+            <p class="ans">
+                {{ dict }}
+            </p>
+            <p>
+                Cos相似值: {{ cosans }}
+            </p>
+
+            <p>詞彙多樣性</p>
+            <ul>
+                <li>文章一: {{ diversity1 }}</li>
+                <li>文章二: {{ diversity2 }}</li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

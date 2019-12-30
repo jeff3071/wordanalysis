@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/static/main.css">
     <title>文章分析</title>
 </head>
 <body>
-    <form action="/res" method="post">
-        <label>文章一:</label>
-        <!-- <input type="textbox" name="username"> -->
-        <textarea name="article1" cols="30" rows="10"></textarea>
-        <br/>
-        <label>文章二:</label>
-        <textarea name="article2" cols="30" rows="10"></textarea>
-        <input type="submit" value="Submit">
+    <form action="/res" method="post" id="article-form">
+        <div id="flex-container">
+            <div class= "article">
+                <label class="article-title">文章一:</label>
+                <textarea name="article1" cols="30" rows="10" placeholder="輸入文字"></textarea>
+            </div>  
+            <br/>
+            <div class="article">
+                <label class="article-title">文章二:</label>
+                <textarea name="article2" cols="30" rows="10" placeholder="輸入文字"></textarea>
+            </div>
+        </div>
+        <br>
+        <input type="submit" value="送出">
     </form>
 
 </body>
